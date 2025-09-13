@@ -1,0 +1,319 @@
+:root {
+    --gold-color: #D4AF37; /* Dourado */
+    --gold-sparkle-color: #FFD700; /* Dourado mais brilhante */
+    --dark-bg-color: #0A0A0A; /* Preto escuro */
+    --dark-overlay-color: rgba(10, 10, 10, 0.7); /* Sobreposição escura */
+    --text-light-color: #F0EAD6; /* Creme/Bege */
+    --text-primary-color: #E8E8E8; /* Cinza claro */
+    --accent-color: #996515; /* Bronze */
+}
+
+/* Estilos de corpo e tipografia */
+body {
+    background-color: var(--dark-bg-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+/* Efeitos de Fundo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-overlay-color);
+    backdrop-filter: blur(2px);
+}
+
+/* Seção Hero */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-out;
+}
+
+.top-name {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold-color);
+    text-transform: capitalize;
+    margin-bottom: -1rem;
+}
+
+.greeting-text {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-light-color);
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+.gold-sparkle {
+    color: var(--gold-sparkle-color);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+.event-motto {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    color: var(--text-light-color);
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Botões */
+.luxurious-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-color), var(--accent-color));
+    color: var(--dark-bg-color);
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    margin: 1.5rem 0;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.luxurious-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.whatsapp-link {
+    color: var(--text-light-color);
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: 1rem;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    color: var(--gold-color);
+}
+
+/* Seções de Conteúdo */
+.section-content {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.section-content:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+}
+
+.invitation-image {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--gold-color);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    margin-bottom: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.invitation-image:hover {
+    transform: scale(1.02);
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: var(--gold-color);
+}
+
+/* Seção de Detalhes */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.detail-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.detail-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.detail-item h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.icon-gold-lg {
+    font-size: 3rem;
+    color: var(--gold-color);
+}
+
+.details-link {
+    color: var(--gold-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.details-link:hover {
+    color: var(--text-light-color);
+}
+
+/* Seção de Localização */
+.map-container {
+    border: 5px solid var(--gold-color);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    margin-top: 2rem;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.location-info {
+    margin-top: 2rem;
+}
+
+.btn-location {
+    margin: 1rem auto;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--dark-bg-color);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    font-size: 0.9rem;
+}
+
+.highlight-info {
+    font-weight: 600;
+    color: var(--gold-color);
+}
+
+.countdown-luxurious {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.countdown-item {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+    text-transform: uppercase;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-sparkle-color);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

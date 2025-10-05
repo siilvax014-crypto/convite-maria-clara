@@ -1,6 +1,6 @@
 :root {
-    --gold-color: #D4AF37; /* Dourado */
-    --gold-sparkle-color: #FFD700; /* Dourado mais brilhante */
+    --gold-color: #BDBDBD; /* Dourado */
+    --gold-sparkle-color: #BDBDBD; /* Dourado mais brilhante */
     --dark-bg-color: #0A0A0A; /* Preto escuro */
     --dark-overlay-color: rgba(10, 10, 10, 0.7); /* Sobreposição escura */
     --text-light-color: #F0EAD6; /* Creme/Bege */
@@ -113,7 +113,7 @@ p {
 
 .gold-sparkle {
     color: var(--gold-sparkle-color);
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    text-shadow: 0 0 15px #BDBDBD;
 }
 
 .event-motto {
@@ -305,7 +305,7 @@ footer {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--gold-sparkle-color);
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    text-shadow: 0 0 10px #BDBDBD;
 }
 
 /* Animações */
